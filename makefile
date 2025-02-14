@@ -160,6 +160,7 @@ exe: $(OBJS)
 	-L$(CONDA)/lib \
 	-L/usr/lib64 \
 	-lcufft -lcudart -lcuda -lnvToolsExt -ltiff -lc -lm -lpthread \
+	-Xlinker -no-pie \
 	-o MotionCor3
 	@echo MotionCor3 has been generated.
 
